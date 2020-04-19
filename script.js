@@ -312,7 +312,7 @@ function Ball(posX, posY, velX, velY, r, healtimer, housetimer, hospitaltimer, c
     			console.log("Reloading as screen orientation is changed!");
     			deactivateInterval();
                 location.reload(true);
-    			exit();
+    			return;
     		}
     	if(stateProxy.saved!=0 && stateProxy.saved%5==0 && set==0 && extra==0 && extra2==0){
     		set=1;
