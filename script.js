@@ -339,6 +339,8 @@ function Ball(posX, posY, velX, velY, r, healtimer, housetimer, hospitaltimer, c
     			hospitals=[];
     			gimmick=800;
     			speed+=45;
+                if(stage%10==0)
+                    speed=177;
    				if(stage%5==0)
                     population+=2;
    				if(stage%2==0)
