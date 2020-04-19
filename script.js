@@ -310,7 +310,8 @@ function Ball(posX, posY, velX, velY, r, healtimer, housetimer, hospitaltimer, c
     	console.log('lk',stateProxy.saved,stateProxy.infected, set, extra);
     	if(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) && screen.orientation.type!="landscape-secondary"){
     			console.log("Reloading as screen orientation is changed!");
-    			location.reload(true);
+    			deactivateInterval();
+                location.reload(true);
     			exit();
     		}
     	if(stateProxy.saved!=0 && stateProxy.saved%5==0 && set==0 && extra==0 && extra2==0){
