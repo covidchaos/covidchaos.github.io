@@ -92,17 +92,19 @@ function sleep(milliseconds) {
   } while (currentDate - date < milliseconds);
 }
 function hospitalOn(){
+    if(first_time==0){
 	house_on=0;
 	hospital_on=1;
 	document.getElementById("b1_1").style.color="white";
 	document.getElementById("b2_1").style.color="black";
-}
+}}
 function houseOn(){
+    if(first_time==0){
 	hospital_on=0;
 	house_on=1;
 	document.getElementById("b2_1").style.color="white";
 	document.getElementById("b1_1").style.color="black";
-}
+}}
 $(document).ready(
 $("#pause_id").click(function pause(){
         var pause_button = document.getElementById("pause_id");
@@ -330,13 +332,19 @@ function Ball(posX, posY, velX, velY, r, healtimer, housetimer, hospitaltimer, c
     	if(stateProxy.infected==0 && flag!=1){
     		level_switcher-=1;
     		if(level_switcher==0){
+                stage++;
     			level_switcher=550;
     			balls=[];
     			hospitals=[];
     			gimmick=800;
-    			speed+=35;
-   				population+=2;
-   				infected+=1;set=0;extra=0;extra2=0;
+    			speed+=45;
+   				if(stage%5==0)
+                    population+=2;
+   				if(stage%2==0)
+                    infected+=1;
+                if(infected>population)
+                    infected=parseInt(population/2);
+                set=0;extra=0;extra2=0;
       			makeSim(population,fixedpopulation,lockedpopulation,infected);
         		stateProxy.vaccines=parseInt(infected/2);		
     			activateInterval();
@@ -363,7 +371,6 @@ function Ball(posX, posY, velX, velY, r, healtimer, housetimer, hospitaltimer, c
 		   		//ctx_1.fillText('🏠',CANVAS_WIDTH/2-3,CANVAS_HEIGHT/2-3);
 		   		if(gimmick==0)  {
 		   			document.getElementById("openModal").style.display = 'none';
-					stage++;
 		   			var temp_v_x=speed*posNeg()*Math.random();
 					var temp_v_y=speed*posNeg()*Math.random()
 					var newBall = new Ball(
