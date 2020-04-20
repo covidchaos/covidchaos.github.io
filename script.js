@@ -330,7 +330,7 @@ function Ball(posX, posY, velX, velY, r, healtimer, housetimer, hospitaltimer, c
  		   		document.getElementById("openModal").style.display = 'none';		   		
     		}
     	}
-    	if(stateProxy.infected==0 && flag!=1){
+    	if(stateProxy.infected<=0 && flag!=1){
     		level_switcher-=1;
     		if(level_switcher==0){
                 stage++;
@@ -338,7 +338,7 @@ function Ball(posX, posY, velX, velY, r, healtimer, housetimer, hospitaltimer, c
     			balls=[];
     			hospitals=[];
     			gimmick=800;
-    			speed+=45;
+    			speed+=36;
                 if(stage%10==0)
                     speed=177;
    				if(stage%5==0)
