@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163878892-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -17,15 +15,10 @@
     <title>COVID Chaos</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <!link rel="stylesheet" href="./bootstrap.min.css">
-    <!script src="./bootstrap.min.js"></script>
-    <!script src="res/Chart.bundle.min.js"><!/script>
     <script src="./jquery.min.js"></script>
     <script src="./script.js" defer="defer"></script>
 </head> 
-
 <body>  
-
 <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px; display: block;" id="band">
     <h2 class="w3-wide"><font color='red'>COVID</font> CHAOS</h2>
     <p class="w3-opacity"><i>#stayhome#savelives</i></p>
@@ -36,15 +29,13 @@
 <p class="w3-justify" id="instr2" style="display: none;">&nbsp;&nbsp; Click on vaccine icon<i class="fas fa-syringe" style=" color: #00CED1; font-size:18px;"></i>, then click on screen and drag to aim vaccine<span class="dot" style="height: 15px;width: 15px;background-color:#00CED1;border-radius:50%;display: inline-block;"></span> at an infected<span class="dot" style="height: 15px;width:15px;background-color:rgba(255,0,0,1);border-radius:50%;display: inline-block;"></span> ball to cure it temporarily. The length of arrow denotes it's speed.</p>
 <p class="w3-justify" id="instr3" style="display: none;">&nbsp;&nbsp;Click on clinic icon<i class="fas fa-clinic-medical" style=" color: rgba(0,255,0,1); font-size:18px;"></i>, then click on screen to construct clinic and immunize<span class="dot" style="height: 15px;width: 15px;background-color:rgba(0,255,0,1);border-radius:50%;display: inline-block;"></span> balls that enter it.</p>
 </div>
-
     <div id="canvas"><canvas id="canvas_1"></canvas>
 	<canvas id="canvas_2"></canvas><canvas id="canvas_3"></canvas>   
     <div id="openModal" class="modalDialog one">
      <div>  
         <h2 id="stage" style="font-size: 18px">STAGE 0</h2>
     </div>
-    </div>
-    
+    </div>   
     <div class="modalDialog two" style=
     "display: none;
     vertical-align: middle; 
@@ -62,8 +53,7 @@
     border-radius: 10px;
     background: -moz-linear-gradient(#fff, #999);
     background: -webkit-linear-gradient(#fff, #999);
-    background: -o-linear-gradient(#fff, #999);
-    "
+    background: -o-linear-gradient(#fff, #999);"
     id="gameover">
     <div>
          <h2 id="gameover1" align="center" style="color: red; font-size: 27px;">&nbsp;&nbsp;&nbsp;YOU DIED:(</h2>
@@ -83,7 +73,6 @@
     ">Play Again!</button> <br/><br/>
        </div>
     </div>
-
          <button type="button" id="b1" class="btn btn-danger btn-circle btn-lg" style="display: block;  position: absolute; bottom:10px; left:10px;background-color: rgba(0,255,0,1);"onclick="hospitalOn()"><i id="b1_1" class="fas fa-clinic-medical" aria-hidden="true" style=" position: absolute; bottom:7px; left:4px; color:black; font-size:38px"></i></button>
             <p id="n_h" style=" position: absolute; bottom:3.5px; left:60.5px; font-size: 20px; color:rgba(0,255,0,1);">*0</p>
          <button class="btn" id="play_id" style="position: absolue; left: 50%; bottom: 10px; transform: translate(-50%, 0%)"><i class="fa fa-play" id="play_i"></i></button>
@@ -92,5 +81,4 @@
         <p id="n_l" style=" position: absolute; bottom:4px; right: 60.5px; font-size: 20px; color:#00CED1">0*</p>
   </div>
 </body>
-
 </html>
